@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Text;
-using TallerHerencia;
+﻿using TallerHerencia;
 
 namespace Backend;
 
@@ -11,16 +7,29 @@ public class Square : GeometricFigure
     //Fields
     private double _a;
 
+    //Propiety
+    public double A
+    {
+        get => _a;
+        set => _a = ValidateA(value);
+    }
     //Contructor
-    public Square(double A)
+    public Square(string name,double a)
 
     {
-        _a = A;
+        Name=name;
+        A = a;
+               
     }
-    //Propiety
-    public double A {
-        get => _a;
-        set => _a =ValidateA(A);
+    //Private methods
+    private double ValidateA(double value)
+    {
+        if (value <= 0)
+        {
+            throw new Exception($"{value},Enter a valid number .");
+        }
+        return value;
+
     }
 
     //Public methods
@@ -30,34 +39,17 @@ public class Square : GeometricFigure
         return A * A;
 
     }
-
-    public override double GetPerimeter()
+        public override double GetPerimeter()
     {
         return A * 4;
     }
-
-    //Private methods
-    private double ValidateA(double A)
-    {
-        if (A <= 0)
-        {
-            throw new Exception($"{A},Enter a valid number .");
-        }
-        return A;
-
-}
+       }
 
 
 
 
 
-}
 
-
-
-
-
-//Private methods
 
 
 
