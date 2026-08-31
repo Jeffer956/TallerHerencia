@@ -2,9 +2,10 @@
 
 public abstract class GeometricFigure
 {
+
     //Propiertes
 
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 
 
     //Methods 
@@ -15,7 +16,7 @@ public abstract class GeometricFigure
     public override string ToString()
     {
 
-        return $"{Name}- Area:{GetArea:D4}/Perimeter:{GetPerimeter:D4}";
+        return $"{Name,-15}=> Area.....:   {GetArea(),10:f5}       Perimeter:   {GetPerimeter(),10:f5}";
     }
 
 }
