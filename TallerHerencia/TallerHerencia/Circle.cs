@@ -1,5 +1,4 @@
 ﻿namespace Backend;
-
 public class Circle : GeometricFigure
 {
     // fields
