@@ -1,12 +1,11 @@
-﻿using TallerHerencia;
-namespace Backend;
+﻿namespace Backend;
 
 public class Circle : GeometricFigure
 {
     // fields
     private double _r;
 
-    // property (single declaration)
+    // property
     public double R
     {
         get => _r;

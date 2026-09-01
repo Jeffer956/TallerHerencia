@@ -1,5 +1,4 @@
 ﻿using Backend;
-using TallerHerencia;
 
 // Crear figuras geométricas
 var circulo = new Circle(name: "Círculo", r: 5);
