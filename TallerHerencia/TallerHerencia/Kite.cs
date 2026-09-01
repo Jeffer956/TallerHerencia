@@ -1,5 +1,4 @@
 ﻿namespace Backend;
-
 public class Kite : Rhombus
 {
     //Fields
