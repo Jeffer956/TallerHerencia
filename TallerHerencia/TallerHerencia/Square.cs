@@ -19,8 +19,8 @@ public class Square : GeometricFigure
     {
         Name=name;
         A = a;
-               
     }
+
     //Private methods
     private double ValidateA(double value)
     {
@@ -39,6 +39,7 @@ public class Square : GeometricFigure
         return A * A;
 
     }
+
         public override double GetPerimeter()
     {
         return A * 4;

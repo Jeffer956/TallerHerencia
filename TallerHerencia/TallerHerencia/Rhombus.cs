@@ -1,7 +1,4 @@
-﻿using System.Xml.Linq;
-
-namespace Backend;
-
+﻿namespace Backend;
 public class Rhombus : Square
 {
     //Fields
@@ -60,6 +57,5 @@ public class Rhombus : Square
     {
         return A * 4;
     }
-    
-
+ 
 }

@@ -1,19 +1,17 @@
 ﻿namespace Backend;
-
-public class Kite : Rhombus
+public class Rectangle : Square
 {
-    //Fields
     private double _b;
 
-
-    //contructor
-
-    public Kite(string name, double a,double b, double d1, double d2) : base(name, a, d1, d2)
+   //Contructor
+    public Rectangle(string name,double b, double a) : base(name, a)
     {
-        B= b;
-
+        B = b;
+        Name = name;
     }
-    //Propierties
+
+    //propierty
+
     public double B
     {
         get => _b;
@@ -22,8 +20,7 @@ public class Kite : Rhombus
     }
 
     //Private methods
-
-    private double ValidateB(double value)
+    public double ValidateB(double value)
     {
         if (value <= 0)
         {
@@ -32,14 +29,15 @@ public class Kite : Rhombus
         return value;
     }
 
-    //Public Methods
+
+    //Public methods
     public override double GetArea()
     {
-        return (D1*D2)/2;
+        return (A*B);
     }
 
     public override double GetPerimeter()
     {
-        return 2*(A+B) ;
+        return 2*(A+B);
     }
 }
